@@ -101,12 +101,12 @@ section > div:nth-child(2n) {
 article > h2 {
   padding-bottom: 1em;
   margin: 0;
-  background: #444;
+  background: hsla(0,0%,4%,.6);
 }
 
 article > p {
   margin: 0;
-  background: #444;
+  background: hsla(0,0%,4%,.6);
 }
 
 article {
