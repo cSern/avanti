@@ -4,6 +4,7 @@
     <head>
         <title>Avanti Gaming</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" type="text/css">
         <meta name="description" content="Avanti Gaming is the premier destination for quality roleplay on the GTA Five Rage Multiplayer platform. Developed by veteran roleplayers, for veteran roleplayers. We design and implement innovative methods to solve problems with old paradigms in the RP environment.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <!-- Meta description should be limited to 50 words or 280 characters. -->
@@ -11,8 +12,10 @@
         <meta property="og:image" content="some-image-location.png">
             [Reference "Open Graph Data"] - Purpose: Provides image context to links in places that recognize this feature.
         -->
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href=".\assets\styles\index.scss">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Play" rel="stylesheet">
+        <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> DO WE STILL NEED?? -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <!-- <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:500|Source+Sans+Pro|Roboto+Condensed" rel="stylesheet"> -->
         <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     </head>
@@ -21,20 +24,26 @@
     <body>
       <header>
         <h1 id="title">Avanti Gaming</h1>
-        <nav>
-          <ul>
-            <li><a href="..\Project Omen\home.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#" id="ucp">UCP</a></li> <!-- To push UCP link to right side of page. -->
-          </ul>
-        </nav>
       </header>
 
 
       <main>
-        <section>
+        <section class="portal">
+          <nav class="buttons">
+            <ul>
+              <li class="portal-btn">
+                <a href=".\index.html">Forum</a>
+              </li>
+              <li class="portal-btn">
+                <a href="#">UCP</a>
+              </li>
+            </ul>
+            <div class="down-arrow">
+              <i class="fas fa-angle-double-down"></i>
+            </div>
+          </nav>
+        </section>
+        <section class="marketing">
           <div>
             <img class="image-big" src="http://via.placeholder.com/768x432" alt="temp"  title="#">
             <!-- <img class="image-big" src="..\Project Omen\images\Jxer0CG.jpg" alt="temp" title="#"> -->
@@ -78,7 +87,6 @@
         <nav>
           <ul>
             <li><a href="#">Contact</a></li>
-            <li><a href="#"><s>Site Map</s></a></li>
           </ul>
         </nav>
       </footer>
