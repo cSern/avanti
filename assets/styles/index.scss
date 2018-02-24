@@ -83,7 +83,7 @@ body {
   border-radius: 0.3em;
   border: .3rem solid #444;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
-  padding: 0.1em 0.2em;
+  padding: 0.2rem 0.4rem;
   margin-top: 20px;
 }
 
@@ -158,7 +158,6 @@ article > h2 {
   border-top-left-radius: .4em;
   border-top-right-radius: .4em;
   text-transform: uppercase;
-  text-decoration: underline overline;
   text-shadow: 0 1px 0 #ccc, 
               0 2px 0 #c9c9c9,
               0 3px 0 #00ccff,
@@ -207,7 +206,7 @@ footer > nav {
   border-radius: 0.3em;
   border: .3rem solid #444;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
-  padding: 0.1em 0.2em;
+  padding: 0.2rem 0.4rem;
 }
 
 footer > nav:hover {
