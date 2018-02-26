@@ -21,15 +21,27 @@ ul, li {
   margin: 0;
   padding: 0;
 }
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+nav li {
+  list-style-type: none;
+}
 /* End Misc Changes */
 
 header {
   display: flex;
   justify-content: center;
-  align-items: stretch;
 }
 
 #title {
+  display: flex;
+  justify-content: center;
   margin-top: .5em;
   font-size: 5em;
   text-transform: uppercase;
@@ -48,23 +60,12 @@ header {
               0 20px 20px rgba(0,0,0,.15);
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 3em;
-  text-transform: uppercase;
-}
-
-nav li {
-  list-style-type: none;
-}
 
 body {
   color: white;
   font-size: 16px;
   background: transparent url('https://s20.postimg.org/6hcqqqqct/beach-sea-coast-ocean-horizon-cloud-1054639-pxhere.com.jpg') center/cover no-repeat fixed;
 }
-
 
 .portal {
   height: 100vh;
@@ -73,8 +74,32 @@ body {
 .portal-menu {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin-top: 4.3em;
+  align-items: center;
+  height: 50%;
+}
+
+ul.flex-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 30%;
+}
+
+div.flex-row-1, div.flex-row-3 {
+  width: 45%;
+}
+
+div.flex-row-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+div.flex-row-2 > a {
+  width: 47.5%;
 }
 
 .portal-button {
@@ -84,11 +109,15 @@ body {
   border: .3rem solid #444;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
   padding: 0.2rem 0.4rem;
-  margin-top: 20px;
+  text-align: center;
 }
 
 .portal-button:hover {
   background: #444;
+}
+
+.fivem-button {
+  text-transform: none;
 }
 
 @keyframes bounce {
@@ -119,10 +148,11 @@ body {
   top: 90vh;
   color: #00ccff;
   animation: bounce 2s infinite;
+  text-align: center;
 }
 
 .marketing {
-  margin: 0 3em;
+  margin: 1em 3em;
 }
 
 .image-big {
@@ -132,21 +162,20 @@ body {
   border-radius: .3em;
 }
 
-section > div {
+div.flex {
   display: flex;
-  margin: 1em 0;
 }
 
-section > div:nth-child(2n) {
+div.flex:nth-child(2n) {
   flex-flow: row-reverse;
   text-align: right;
 }
 
-div:nth-of-type(2n+1) > article {
+div.flex:nth-of-type(2n+1) > article {
   margin-left: .5em;
 }
 
-div:nth-of-type(2n) > article {
+div.flex:nth-of-type(2n) > article {
   margin-right: .5em;
 }
 
@@ -193,27 +222,52 @@ article {
   font-family: 'Play', sans-serif;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  margin: 2em auto;
+@media (max-width: 1700px) {
+  ul.flex-container {
+    font-size: .45em;
+  }
 }
 
-footer > nav {
-  background: #00ccff;
-  font-family: 'Play', sans-serif;
-  border-radius: 0.3em;
-  border: .3rem solid #444;
-  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
-  padding: 0.2rem 0.4rem;
-}
+@media (max-width: 800px) {
+  #title {
+    font-size: 3em;
+  }
 
-footer > nav:hover {
-  background: #444;
-}
+  div.max-width-column {
+    flex-flow: column wrap !important;
+    align-items: center;
+    text-align: left !important;
+    margin: 0;
+  }
+  
+  /*This is only necessary to have if I no longer use !important above.*/
+  /*div.max-width-column:nth-child(2n) {
+    flex-flow: column wrap;
+    text-align: left;
+  }*/
 
-@media (max-width: 720px) {
-  section > div {
+  ul.flex-container {
     flex-direction: column;
+    font-size: .25em;
+  }
+}
+
+@media (max-width: 500px) {
+  #title {
+    font-size: 2em;
+  }
+
+  div.flex-row-1, div.flex-row-3 {
+    width: 90%;
+  }
+
+  div.flex-row-2 {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: inherit;
+  }
+
+  div.flex-row-2 > a {
+    width: 100%;
   }
 }
