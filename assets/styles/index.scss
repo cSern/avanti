@@ -24,8 +24,6 @@ ul, li {
 
 nav a {
   text-decoration: none;
-  color: white;
-  font-size: 3em;
   text-transform: uppercase;
 }
 
@@ -34,15 +32,15 @@ nav li {
 }
 /* End Misc Changes */
 
-header {
+div.header1-social-media {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: .5em;
 }
 
 #title {
-  display: flex;
-  justify-content: center;
-  margin-top: .5em;
+  margin-left: 33%;
   font-size: 5em;
   text-transform: uppercase;
   font-family: 'Play', sans-serif;
@@ -60,6 +58,9 @@ header {
               0 20px 20px rgba(0,0,0,.15);
 }
 
+nav.social-media {
+  margin: 0 1em 0 auto;
+}
 
 body {
   color: white;
@@ -71,14 +72,15 @@ body {
   height: 100vh;
 }
 
-.portal-menu {
+
+nav.portal-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50%;
 }
 
-ul.flex-container {
+ul.portal-flex-column {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -103,16 +105,21 @@ div.flex-row-2 > a {
 }
 
 .portal-button {
+  font-size: 3em;
+  color: white;
   background: #00ccff;
-  font-family: 'Play', sans-serif;
   border-radius: 0.3em;
   border: .3rem solid #444;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
   padding: 0.2rem 0.4rem;
+}
+
+li.portal-button {
+  font-family: 'Play', sans-serif;
   text-align: center;
 }
 
-.portal-button:hover {
+.portal-button:hover, button.social-media-links:hover {
   background: #444;
 }
 
