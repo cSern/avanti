@@ -106,18 +106,23 @@ div.flex-row-2 > a {
 }
 
 .portal-button {
-  font-size: 3em;
   color: white;
   background: #00ccff;
   border-radius: 0.3em;
   border: .3rem solid #444;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
-  padding: 0.2rem 0.4rem;
+}
+
+div.portal-button {
+  display: inline-block;
+  padding: .1em .3em;
 }
 
 li.portal-button {
   font-family: 'Play', sans-serif;
   text-align: center;
+  font-size: 3em;
+  padding: 0.2rem 0.4rem;
 }
 
 .portal-button:hover, button.social-media-links:hover {
@@ -230,7 +235,7 @@ article {
   font-family: 'Play', sans-serif;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   nav.social-media {
     display: flex;
     flex-direction: column;
@@ -238,6 +243,16 @@ article {
 }
 
 @media (max-width: 900px) {
+  div.header1-social-media {
+    display: block;
+    text-align: center;
+  }
+  
+  nav.social-media {
+    display: block;
+    position: static;
+  }
+  
   div.max-width-column {
     flex-flow: column wrap !important;
     align-items: center;
@@ -250,9 +265,20 @@ article {
     flex-flow: column wrap;
     text-align: left;
   }*/
+}
 
-  .portal-button {
-    flex-direction: column;
+@media (max-width: 650px) {
+  #title {
+    font-size: 3em;
+  }
+
+  div.portal-button {
+    font-size: .5em;
+    margin: 0 1.5em;
+  }
+
+  li.portal-button {
+    font-size: 2.5em;
   }
 }
 
@@ -265,7 +291,7 @@ article {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    height: inherit;
+    height: 9em;
   }
 
   div.flex-row-2 > a {
@@ -275,11 +301,22 @@ article {
 
 @media (max-width: 400px) {
   #title {
-    font-size: 3em;
+    font-size: 2em;
   }
 
-  nav.social-media, div.header1-social-media {
-    display: block;
-    position: relative;
+  div.portal-button {
+    font-size: .4em;
+  }
+
+  li.portal-button {
+    font-size: 2em;
+  }
+
+  div.flex-row-1, div.flex-row-3 {
+    width: 10em;
+  }
+
+  div.flex-row-2 > a {
+    width: 10em;
   }
 }
