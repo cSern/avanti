@@ -32,6 +32,13 @@ nav li {
 }
 /* End Misc Changes */
 
+body {
+  color: white;
+  font-size: 16px;
+  /*background: transparent url('https://s20.postimg.org/67j1zvi0d/avanti_BG.jpg') center/cover no-repeat fixed;*/
+  background: transparent url('/assets/images/avantiBG-dimmed.jpg') center/cover no-repeat fixed;
+}
+
 header {
   text-align: center;
   padding: .5em 0;
@@ -57,19 +64,31 @@ header {
               0 20px 20px rgba(0,0,0,.15);
 }
 
+#status {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1.75em;
+  left: 1.5em;
+  background: rgba(65, 65, 65, 0.493);
+  padding: .25em;
+  border-radius: 3px;
+}
+
+.status-button-on {
+  color: rgb(0, 175, 0);
+}
+
+.status-button-off {
+  color: rgb(194, 0, 0);
+}
+
 nav.social-media {
   position: absolute;
   top: 1.75em;
   right: 1.5em;
 }
 
-/*background: will try to load local high res image first and if not will load lower res online hosted image instead.*/
-body {
-  color: white;
-  font-size: 16px;
-  background: transparent url('https://s20.postimg.org/67j1zvi0d/avanti_BG.jpg') center/cover no-repeat fixed;
-  background: transparent url('/assets/images/avantiBG-dimmed.jpg') center/cover no-repeat fixed;
-}
 
 .portal {
   height: 100vh;
@@ -109,7 +128,8 @@ div.flex-row-2 > a {
 
 .portal-button {
   color: white;
-  background: #2196F3;
+  background: linear-gradient(to right,#49caeb, rgb(0, 79, 143));
+  /*background: #2196F3;*/
   border-radius: 3px;
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
 }
